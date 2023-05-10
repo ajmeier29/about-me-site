@@ -1,18 +1,26 @@
-import { VStack, Image } from '@chakra-ui/react';
+import { VStack, Image, Wrap, WrapItem, Center } from '@chakra-ui/react';
 import { WelcomMessage } from './Text';
 import BottomCards from './BottomCards';
 
 const About = props => {
   return (
-    <VStack spacing={8}>
-      <Image
-        src="./andrew-young-milo.jpg"
-        borderRadius={'full'}
-        width="250px"
-      />
-      <WelcomMessage />
-      <BottomCards />
-    </VStack>
+    <Wrap justify={'center'}>
+      <WrapItem>
+        <Center>
+          <Image
+            src="./andrew-young-milo.jpg"
+            borderRadius={'full'}
+            width="30%"
+          />
+        </Center>
+      </WrapItem>
+      <WrapItem>
+        <WelcomMessage />
+      </WrapItem>
+      <WrapItem>
+        <BottomCards />
+      </WrapItem>
+    </Wrap>
   );
 };
 

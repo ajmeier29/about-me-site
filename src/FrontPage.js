@@ -1,6 +1,5 @@
 import { Box, Grid } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 import NavigationBar from './Navigation/NavigationBar';
 import About from './About';
 import Home from './Home';
@@ -19,7 +18,7 @@ const FrontPage = props => {
             </Route>
           </Routes>
         </BrowserRouter>
-        <ColorModeSwitcher justifySelf="flex-end" />
+
         <Footer />
       </Grid>
     </Box>
