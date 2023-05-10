@@ -16,7 +16,6 @@ export default function Footer() {
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}
-      marginTop={'100vh'}
       position={'relative'}
     >
       <Container
@@ -31,10 +30,10 @@ export default function Footer() {
         <VStack>
           <Wrap>
             <WrapItem>
-              <Link href={'#'}>Home</Link>
+              <Link href={'/'}>Home</Link>
             </WrapItem>
             <WrapItem>
-              <Link href={'#'}>About</Link>
+              <Link href={'/About'}>About</Link>
             </WrapItem>
           </Wrap>
         </VStack>

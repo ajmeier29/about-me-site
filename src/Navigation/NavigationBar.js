@@ -16,7 +16,7 @@ const NavigationBar = props => {
         fontSize="xl"
         marginTop="0.75%"
         marginLeft="1%"
-        marginBottom={150}
+        marginBottom="10%"
       >
         <Wrap>
           <WrapItem>

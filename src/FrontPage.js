@@ -1,4 +1,4 @@
-import { Box, Grid } from '@chakra-ui/react';
+import { Box, Grid, GridItem } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavigationBar from './Navigation/NavigationBar';
 import About from './About';
@@ -9,17 +9,26 @@ import Footer from './Navigation/Footer';
 const FrontPage = props => {
   return (
     <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<NavigationBar />}>
-              <Route index element={<Home />} />
-              <Route path="about" element={<About />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-
-        <Footer />
+      <Grid
+        templateAreas={`"header"
+                  "main"
+                  "footer"`}
+        minH="100vh"
+        p={5}
+      >
+        <GridItem area={'main'}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<NavigationBar />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </GridItem>
+        <GridItem area={'footer'}>
+          <Footer />
+        </GridItem>
       </Grid>
     </Box>
   );
