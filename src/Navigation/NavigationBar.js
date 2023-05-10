@@ -4,6 +4,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from '@chakra-ui/react';
+import { Link, Outlet } from 'react-router-dom';
 
 const NavigationBar = props => {
   return (
@@ -18,9 +19,12 @@ const NavigationBar = props => {
         fontSize="xl"
         marginTop="12px"
         marginLeft="15px"
+        marginBottom={150}
       >
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">Home</BreadcrumbLink>
+          <Link to="/">
+            <BreadcrumbLink>Home</BreadcrumbLink>
+          </Link>
         </BreadcrumbItem>
 
         <BreadcrumbItem>
@@ -36,9 +40,12 @@ const NavigationBar = props => {
         </BreadcrumbItem>
 
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">About</BreadcrumbLink>
+          <Link to="/About">
+            <BreadcrumbLink>About</BreadcrumbLink>
+          </Link>
         </BreadcrumbItem>
       </Breadcrumb>
+      <Outlet />
     </Box>
   );
 };
