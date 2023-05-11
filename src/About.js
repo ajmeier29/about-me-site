@@ -4,13 +4,13 @@ import BottomCards from './BottomCards';
 
 const About = props => {
   return (
-    <Wrap justify={'center'}>
+    <Wrap justify={'center'} padding={10}>
       <WrapItem>
         <Center>
           <Image
             src="./andrew-young-milo.jpg"
             borderRadius={'full'}
-            width="30%"
+            width="250px"
           />
         </Center>
       </WrapItem>

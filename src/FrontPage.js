@@ -16,7 +16,7 @@ const FrontPage = props => {
         minH="100vh"
         p={5}
       >
-        <GridItem area={'main'}>
+        <GridItem area={'header'}>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<NavigationBar />}>

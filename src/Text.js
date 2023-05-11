@@ -4,7 +4,7 @@ const WelcomMessage = props => {
   return (
     <Flex>
       <Center>
-        <TextBox margin="25px" marginBottom="10px">
+        <TextBox width="75%" margin="25px" marginBottom="10px">
           My name is Andrew Meier and I have been a software developer for over
           13 years. I have started to practice Emotion Code healing in 2022 and
           I am a Certified Emotion Code Practitioner. My objective is to reach

@@ -3,56 +3,37 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Wrap,
-  WrapItem,
 } from '@chakra-ui/react';
 import { Link, Outlet } from 'react-router-dom';
 
 const NavigationBar = props => {
   return (
-    <Box borderWidth="1px" borderRadius="lg" marginBottom={'10%'} height="5%">
-      <Breadcrumb
-        fontWeight="medium"
-        fontSize="xl"
-        marginTop="0.75%"
-        marginLeft="1%"
-        marginBottom="10%"
-      >
-        <Wrap>
-          <WrapItem>
-            <BreadcrumbItem>
-              <Link to="/">
-                <BreadcrumbLink>Home /</BreadcrumbLink>
-              </Link>
-            </BreadcrumbItem>
-          </WrapItem>
+    <Box>
+      <Box borderWidth="1px" borderRadius="5px" padding={3}>
+        <Breadcrumb fontWeight="medium" fontSize="xl">
+          <NavLink link="/" text="Home /&nbsp;" />
 
-          <WrapItem>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="#">Emotion Code /</BreadcrumbLink>
-            </BreadcrumbItem>
-          </WrapItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="#">Body Code</BreadcrumbLink>
-          </BreadcrumbItem>
+          <NavLink link="#" text="Emotion Code /&nbsp;" />
 
-          <WrapItem>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="#">Reiki /</BreadcrumbLink>
-            </BreadcrumbItem>
-          </WrapItem>
+          <NavLink link="#" text="Body Code /&nbsp;" />
 
-          <WrapItem>
-            <BreadcrumbItem>
-              <Link to="/About">
-                <BreadcrumbLink>About</BreadcrumbLink>
-              </Link>
-            </BreadcrumbItem>
-          </WrapItem>
-        </Wrap>
-      </Breadcrumb>
+          <NavLink link="#" text="Reiki /&nbsp;" />
+
+          <NavLink link="/About" text="About" />
+        </Breadcrumb>
+      </Box>
       <Outlet />
     </Box>
+  );
+};
+
+const NavLink = props => {
+  return (
+    <BreadcrumbItem>
+      <Link to={props.link}>
+        <BreadcrumbLink>{props.text}</BreadcrumbLink>
+      </Link>
+    </BreadcrumbItem>
   );
 };
 
