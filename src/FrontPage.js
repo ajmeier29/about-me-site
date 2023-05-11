@@ -11,7 +11,6 @@ const FrontPage = props => {
     <Box textAlign="center" fontSize="xl">
       <Grid
         templateAreas={`"header"
-                  "main"
                   "footer"`}
         minH="100vh"
         p={5}
