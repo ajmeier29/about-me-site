@@ -1,6 +1,5 @@
 import {
   Center,
-  AbsoluteCenter,
   Box,
   HStack,
   Textarea,
@@ -9,8 +8,7 @@ import {
   Button,
   Text,
   Flex,
-  Wrap,
-  WrapItem,
+  Divider,
 } from '@chakra-ui/react';
 
 const Contact = props => {
@@ -33,15 +31,50 @@ const EmailForm = props => {
             <ContactForm />
           </Box>
           <Flex minHeight="25vh" width="25%">
-            <Text color="grey" align={'top'}>
-              Contact Me for any details about Energy work that. Contact Me for
-              any details about Energy work that.Contact Me for any details
-              about Energy work that.
-            </Text>
+            <ContactFormText />
           </Flex>
         </Center>
       </HStack>
     </ContactBox>
+  );
+};
+
+const ContactFormText = props => {
+  return (
+    <Box>
+      <Box>
+        <Text as="b" color="grey" fontSize={'3xl'}>
+          Interested in Energy Work?
+        </Text>
+      </Box>
+      <Box marginTop={5}>
+        <ContactMessageText textAlign="left" fontSize="2xl">
+          Book A Demo
+        </ContactMessageText>
+        <ContactMessageText textAlign="left" fontSize="lg">
+          Book a free 30 minute demo session today. I will explain why removing
+          trapped emotions in the body is important as well as
+        </ContactMessageText>
+        <ContactMessageText>
+          _________________________________
+        </ContactMessageText>
+      </Box>
+    </Box>
+  );
+};
+
+const ContactMessageText = props => {
+  return (
+    <Box>
+      <Text
+        as={props.as}
+        textAlign={props.textAlign}
+        color="grey"
+        fontSize={props.fontSize}
+      >
+        {props.children}
+      </Text>
+    </Box>
   );
 };
 
