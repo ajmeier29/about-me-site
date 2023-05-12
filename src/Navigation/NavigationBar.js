@@ -24,7 +24,11 @@ const NavigationBar = props => {
 
             <NavLink link="#" text="Reiki" />
 
+            <NavLink link="#" text="Resume" />
+
             <NavLink link="/About" text="About" />
+
+            <NavLink link="/Contact" text="Contact" />
           </Wrap>
         </Breadcrumb>
       </Flex>

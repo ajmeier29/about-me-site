@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavigationBar from './Navigation/NavigationBar';
 import About from './About';
 import Home from './Home';
+import Contact from './Contact';
 import Footer from './Navigation/Footer';
 
 // This function is using spread syntax to unload all props into the Text field
@@ -21,6 +22,7 @@ const FrontPage = props => {
               <Route path="/" element={<NavigationBar />}>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
               </Route>
             </Routes>
           </BrowserRouter>
