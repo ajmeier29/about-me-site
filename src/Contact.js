@@ -88,11 +88,7 @@ const FormInput = props => {
 const ContactBox = props => {
   return (
     <Center>
-      <Box
-        borderRadius="xl"
-        background={props.backgroundColor}
-        border="2px solid green"
-      >
+      <Box borderRadius="xl" background={props.backgroundColor}>
         {props.children}
       </Box>
     </Center>
