@@ -1,5 +1,6 @@
 import {
   Center,
+  AbsoluteCenter,
   Box,
   HStack,
   Textarea,
@@ -8,16 +9,16 @@ import {
   Button,
   Text,
   Flex,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 
 const Contact = props => {
   return (
-    <Center marginTop={'20%'}>
+    <Center margin="10%">
       <Box>
-        <HStack>
-          <EmailForm />
-          <ContactBox />
-        </HStack>
+        <EmailForm />
+        <ContactBox />
       </Box>
     </Center>
   );
@@ -25,27 +26,28 @@ const Contact = props => {
 
 const EmailForm = props => {
   return (
-    <Box backgroundColor="grey" padding="50px">
-      <ContactBox backgroundColor="white">
-        <HStack>
-          <Box>
+    <ContactBox backgroundColor="white">
+      <HStack>
+        <Center>
+          <Box width="55%" boxShadow={'2xl'} borderRadius="2xl" margin="2%">
             <ContactForm />
           </Box>
-          <Flex>
-            <Text color="grey" align={'center'}>
+          <Flex minHeight="25vh" width="25%">
+            <Text color="grey" align={'top'}>
               Contact Me for any details about Energy work that. Contact Me for
-              any details about Energy work that.
+              any details about Energy work that.Contact Me for any details
+              about Energy work that.
             </Text>
           </Flex>
-        </HStack>
-      </ContactBox>
-    </Box>
+        </Center>
+      </HStack>
+    </ContactBox>
   );
 };
 
 const ContactForm = props => {
   return (
-    <VStack spacing={5} margin="50px">
+    <VStack spacing={5} margin="15%">
       <FormInput id="fName" placeholder="First Name" />
       <FormInput id="lName" placeholder="Last Name" />
       <FormInput id="emailAddress" placeholder="Email Address" />
@@ -86,7 +88,11 @@ const FormInput = props => {
 const ContactBox = props => {
   return (
     <Center>
-      <Box borderRadius="xl" background={props.backgroundColor} boxShadow="2xl">
+      <Box
+        borderRadius="xl"
+        background={props.backgroundColor}
+        border="2px solid green"
+      >
         {props.children}
       </Box>
     </Center>
