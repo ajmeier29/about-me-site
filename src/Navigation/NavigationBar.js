@@ -5,6 +5,8 @@ import {
   BreadcrumbLink,
   Flex,
   HStack,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 import { Link, Outlet } from 'react-router-dom';
 
@@ -13,7 +15,7 @@ const NavigationBar = props => {
     <Box>
       <Flex borderWidth="1px" borderRadius="5px" padding={3}>
         <Breadcrumb fontWeight="medium" fontSize="xl">
-          <HStack>
+          <Wrap>
             <NavLink link="/" text="Home" />
 
             <NavLink link="#" text="Emotion Code" />
@@ -23,7 +25,7 @@ const NavigationBar = props => {
             <NavLink link="#" text="Reiki" />
 
             <NavLink link="/About" text="About" />
-          </HStack>
+          </Wrap>
         </Breadcrumb>
       </Flex>
       <Outlet />
@@ -33,11 +35,13 @@ const NavigationBar = props => {
 
 const NavLink = props => {
   return (
-    <BreadcrumbItem separator={'/'} spacing={2.5}>
-      <Link to={props.link}>
-        <BreadcrumbLink>{props.text}</BreadcrumbLink>
-      </Link>
-    </BreadcrumbItem>
+    <WrapItem>
+      <BreadcrumbItem separator={'/'} spacing={2.5}>
+        <Link to={props.link}>
+          <BreadcrumbLink>{props.text}</BreadcrumbLink>
+        </Link>
+      </BreadcrumbItem>
+    </WrapItem>
   );
 };
 
