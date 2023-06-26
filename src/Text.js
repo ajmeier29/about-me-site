@@ -1,18 +1,20 @@
-import { Text, Stack, Flex } from '@chakra-ui/react';
+import { Text, Stack, Flex, Center } from '@chakra-ui/react';
 
 const WelcomMessage = props => {
   return (
     <Flex>
-      <TextBox textAlign="center" margin="100px" marginBottom="10px">
-        My name is Andrew Meier and I have been a software developer for over 13
-        years. I have started to practice Emotion Code healing in 2022 and I am
-        a Certified Emotion Code Practitioner. My objective is to reach as many
-        people as I can to spread the word about Emotion Code healing as well as
-        working on others to help them heal at a rate that Western Medicine is
-        incapable of doing. I have been practicing Chinese Medicine, Chakra
-        healing, among others and nothing has been as fast and immediate as the
-        Emotion Code!
-      </TextBox>
+      <Center>
+        <TextBox width="75%" margin="25px" marginBottom="10px">
+          My name is Andrew Meier and I have been a software developer for over
+          13 years. I have started to practice Emotion Code healing in 2022 and
+          I am a Certified Emotion Code Practitioner. My objective is to reach
+          as many people as I can to spread the word about Emotion Code healing
+          as well as working on others to help them heal at a rate that Western
+          Medicine is incapable of doing. I have been practicing Chinese
+          Medicine, Chakra healing, among others and nothing has been as fast
+          and immediate as the Emotion Code!
+        </TextBox>
+      </Center>
     </Flex>
   );
 };
